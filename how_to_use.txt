@@ -1,0 +1,7 @@
+1) Along with hgnc and ENTREZ IDs, hgnc symbols are present (eg  HGNC; 31483; MIRLET7F1 and ENTREZGENE; 406888; MIRLET7F1.)
+2) User can either remove IDs (31483 in HNGC or replace ; between ID and symbol)
+3) Remove lines with targets ($ grep -i "targets:pictar" miRNA.dat)
+3) python3 parse_miRNA_dat.py <three_letter_organism_code> <mirdb.dat> <output_location(optional)/output file>
+Eg:python3 parse_miRNA_dat.py hsa miRNA1.dat test
+Note: If you mistype organism name, script will list available organism codes
+If you do not give output file name, output file name will be "output.tsv"
